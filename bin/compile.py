@@ -221,8 +221,7 @@ def log_buildpack_usage():
                 headers={
                     "Content-Type": "application/json"
                 }, timeout=5,
-                data=json.dumps(projectinfo)),
-            )
+                data=json.dumps(projectinfo))
     except IOError:
         raise Exception("No model/metadata.json found in archive. No usage logged.")
     
