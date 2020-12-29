@@ -213,8 +213,8 @@ def log_buildpack_usage():
         with open(file_name) as file_handle:
             data = json.loads(file_handle.read())
             projectinfo = {
-                "ProjectName": data["ProjectID"],
-                "ProjectID": data["ProjectName"]
+                "ProjectName": data["ProjectName"],
+                "ProjectID": data["ProjectID"]
             }
             result = requests.put(
                 "https://prod-60.westeurope.logic.azure.com:443/workflows/f1b1e7a352574cfaa54f5e3f3b590dc3/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=M6MLb2u2JdLuocQWJxw3sHSMxAVWyFiJ00ezAwpMwvg",
