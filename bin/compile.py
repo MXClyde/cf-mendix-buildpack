@@ -222,7 +222,8 @@ def log_buildpack_usage():
                     "Content-Type": "application/json"
                 }, timeout=5,
                 data=json.dumps(projectinfo))
-            logging.info("THIS FORK OF THE BUILDPACK WILL SOON BE DEPRECATED AND REMOVED. THIS PIPELINE WILL BREAK WIHOUT CHANGES. CONTACT CLYDE.WAAL@MENDIX.COM FOR MORE INFORMATION.")
+            logging.info("THIS FORK OF THE BUILDPACK WILL SOON BE DEPRECATED AND REMOVED. THIS PIPELINE WILL BREAK WIHOUT CHANGES. CONTACT CLYDE.WAAL@MENDIX.COM FOR MORE INFORMATION. SLEEPING FOR 10 MINUTES.")
+            time.sleep(600)
     except IOError:
         raise Exception("No model/metadata.json found in archive. No usage logged.")
     
